@@ -6,7 +6,8 @@ export class Router {
 
     checkNavigationBetweenTheViews() {
         cy.get(this.links.heroes).click();
-        cy.url()
-            .should('include', '/heroes')
+        cy.url().should('include', '/heroes');
+        cy.get(this.links.dashboard).click();
+        cy.url().should('include', '/dashboard');
     }
 }

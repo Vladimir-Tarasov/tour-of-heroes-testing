@@ -1,4 +1,4 @@
-# Test plan for tour of heroes application.
+# Testing of tour of heroes application.
 
 ## Objective:
 To ensure e2e testing of the application Tour of Heroes.
@@ -8,10 +8,21 @@ To ensure e2e testing of the application Tour of Heroes.
 - Device: Desktop.
 - Testing Tool: Cypress.
 
-## Test scenarios:
+## Testing:
 1. Heroes menu.
-- Check count of items.
-- Check most heroic heroes.
+- [x] Check count of items.
+- [x] Check most heroic heroes.
 
 2. Router.
-- Check navigation between the views.
+- [x] Check navigation between the views.
+
+3. App dashboard.
+- [x] Click on "Magneta".
+- [x] Click on "Go back".
+- [x] Click on random heroes name.
+- [x] Searching.
+
+1. App heroes.
+- [x] Add hero.
+- [x] Remove hero.
+- [x] Clear messages.
