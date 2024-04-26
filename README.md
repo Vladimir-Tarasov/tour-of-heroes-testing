@@ -22,7 +22,7 @@ To ensure e2e testing of the application Tour of Heroes.
 - [x] Click on random heroes name.
 - [x] Searching.
 
-1. App heroes.
+4. App heroes.
 - [x] Add hero.
 - [x] Remove hero.
 - [x] Clear messages.
