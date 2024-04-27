@@ -14,15 +14,15 @@ export class HeroesApp extends Router {
         heroes: 'ul li a'
     };
 
-    addHero() {
+    addHero(name) {
         cy.get(this.links.heroes).click();
         cy.get(this.input.myHero)
             .click()
-            .type('new');
+            .type(name);
         cy.get(this.button.add).click();
         cy.get(this.list.heroes)
             .invoke('text')
-            .should('include', 'new');
+            .should('include', name);
         return this;
     }
 

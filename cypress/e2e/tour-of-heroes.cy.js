@@ -7,8 +7,11 @@ const { HeroesMenu } = require('./heroes-menu.view');
 const { Router } = require('./router.view');
 const { HeroesApp } = require('./heroes-app.view');
 const { MessagesApp } = require('./messages-app.view');
+const { Chance } = require('chance');
 
 describe('Tour of heroes testing', () => {
+    var chance = new Chance();
+
     const heroesMenu = new HeroesMenu();
     const router = new Router();
     const dashboardApp = new DashboardApp();
@@ -16,6 +19,7 @@ describe('Tour of heroes testing', () => {
     const heroesSearching = new HeroesSearching();
     const heroesApp = new HeroesApp();
     const messagesApp = new MessagesApp();
+    const randomName = chance.first();
 
     beforeEach(() => {
         cy.visit('http://localhost:4200');
@@ -44,7 +48,7 @@ describe('Tour of heroes testing', () => {
     })
 
     it('should check heroes app', () => {
-        heroesApp.addHero()
+        heroesApp.addHero(randomName)
             .removeHero()
     })
 
