@@ -7,13 +7,10 @@ export class HeroesSearching {
         result: 'app-hero-search .search-result li a'
     };
 
-    heroesName = ['Bombasto', 'Celeritas', 'Magneta', 'RubberMan'];
-    randomName = this.heroesName[Math.floor(Math.random() * this.heroesName.length)];
-
-    search() {
+    search(savedName) {
         cy.get(this.input.search)
             .click()
-            .type(this.randomName);
+            .type(savedName);
         cy.get(this.link.result)
             .click();
     }

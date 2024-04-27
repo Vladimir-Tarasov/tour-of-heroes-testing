@@ -18,6 +18,7 @@ describe('Tour of heroes testing', () => {
     const heroesApp = new HeroesApp();
     const messagesApp = new MessagesApp();
     const name = Data.name();
+    const savedName = Data.listOfNames();
 
     beforeEach(() => {
         cy.visit('http://localhost:4200');
@@ -41,8 +42,8 @@ describe('Tour of heroes testing', () => {
     })
 
     it('should check searching', () => {
-        heroesSearching.search();
-        heroesDetail.checkSearchedName();
+        heroesSearching.search(savedName);
+        heroesDetail.checkSearchedName(savedName);
     })
 
     it('should check heroes app', () => {

@@ -30,8 +30,8 @@ export class HeroesDetail extends HeroesSearching {
         });
     }
 
-    checkSearchedName() {
+    checkSearchedName(savedName) {
         cy.get(this.input.heroName)
-            .should('have.value', this.randomName);
+            .should('have.value', savedName);
     }
 }
